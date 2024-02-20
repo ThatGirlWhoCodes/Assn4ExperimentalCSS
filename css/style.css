@@ -15,10 +15,20 @@ html {
 
 
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
-
+header{
+    margin-top: 3.125em;
+    margin-bottom: 3.125em;
+    text-align: center;
+}
+header a{
+    text-decoration: none;
+    color: black;
+}
+header a:hover{
+    color:  green;
+}
 body {
-	
-	
+	background-color:azure;
 }
 
 
@@ -26,13 +36,15 @@ body {
 	
 }
 
-
-#box {
+img{
+    width: 100%;
+}
+/* #box {
 	border: 1px solid black;
 	padding: 10px;
 	display: inline-block;
-}
-#shape {
+} */
+/* #shape {
 	background: red;
 	height: 100px;
 	width: 100px;
@@ -43,9 +55,29 @@ body {
 #box:hover #shape{
     background: blue;
     transform: translate(0px, 0px) scale(8);
+} */
+
+footer{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: .65em;
 }
-
-
+.back-to-top {
+    text-decoration: none;
+    padding: 1em;
+    background-color: #444a;
+    border-radius: 0.5em;
+    font-weight: bold;
+    line-height: 0.5;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    color: white;
+  }
+  
+  .back-to-top:hover {
+    background-color: #444f;
+    color: white;
+  }
+  
 
 /* Class for making YouTube/Vimeo videos responsive */
 
@@ -87,9 +119,6 @@ You can adjust the min-width numbers below, and add as many new media queries as
 /* Minimum width for iPads and tablets.  */
 @media all and (min-width: 481px) {
 	
-	
-	
-	
 } /* closes 481px+ */
 
 
@@ -108,7 +137,10 @@ You can adjust the min-width numbers below, and add as many new media queries as
 @media all and (min-width: 1024px) {
 	
 	
-	
+	img{
+        width: 100vw;
+    height: 100vh;
+    }
 	
 } /* closes 1024px+ */
 
