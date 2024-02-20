@@ -1,8 +1,15 @@
+/* FONT FAMILIES */
+/* logo font */
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+/* dislcaimer font */
+@import url('https://fonts.googleapis.com/css2?family=Annapurna+SIL:wght@400;700&display=swap');
+
+
 /* Basic CSS resets -- leveling slight inconsistencies in browsers */
 html, body {
-	margin:0px;
-	padding:0px;
-	height:100%;
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -12,13 +19,26 @@ html {
 }
 
 
-
+header, footer{
+    background-color: #04ac88;
+    color: white;
+}
 
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 header{
-    margin-top: 3.125em;
-    margin-bottom: 3.125em;
-    text-align: center;
+
+    /* position properties */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  
+}
+footer{
+    position:static;
+    width: 100%;
+    top: 0;
+    left: 0; 
 }
 header a{
     text-decoration: none;
@@ -30,7 +50,15 @@ header a:hover{
 body {
 	background-color:azure;
 }
-
+h1, h2{
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h1{
+    font-size: 5rem;
+    font-weight: 700;
+}
 
 #container {
 	
@@ -38,6 +66,7 @@ body {
 
 img{
     width: 100%;
+    margin-top: 250px;
 }
 /* #box {
 	border: 1px solid black;
@@ -56,7 +85,11 @@ img{
     background: blue;
     transform: translate(0px, 0px) scale(8);
 } */
-
+#disclaimer{
+    font-family: "Annapurna SIL", serif;
+    font-weight: 400;
+    font-style: normal;
+}
 footer{
     font-family: 'Times New Roman', Times, serif;
     font-size: .65em;
@@ -109,6 +142,7 @@ hr {
     padding: 0px;
 }
 
+/* KEY FRAMES */
 
 
 /* ========================================
