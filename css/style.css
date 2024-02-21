@@ -20,15 +20,13 @@ html {
 
 
 header, footer{
-    background-color: #04ac88;
-    color: white;
+    color: black;
 }
 
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 header{
 
     /* position properties */
-    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -67,7 +65,6 @@ div{
 
 img{
     width: 100%;
-    margin-top: 250px;
 }
 /* #box {
 	border: 1px solid black;
