@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
 /* dislcaimer font */
 @import url('https://fonts.googleapis.com/css2?family=Annapurna+SIL:wght@400;700&display=swap');
-
+@import 'animate.css';
 
 /* Basic CSS resets -- leveling slight inconsistencies in browsers */
 html, body {
@@ -25,24 +25,37 @@ header, footer{
 
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 header{
+    text-align: center;
 
-    /* position properties */
     width: 100%;
     top: 0;
     left: 0;
   }
+
+a{
+    font-size: 1.25rem;
+}
+a:hover{
+    background: rgb(26, 188, 156);
+    background: -moz-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgb(24, 119, 132) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%,rgb(24, 119, 132) 100%);
+    background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgb(24, 119, 132) 100%);
+    padding: 2em;
+    border: dotted white;
+    border-radius: 50%;
+}
 footer{
     position:static;
     width: 100%;
     top: 0;
     left: 0; 
 }
+nav{
+    padding: 2rem;
+}
 header a{
     text-decoration: none;
     color: black;
-}
-header a:hover{
-    color:  green;
 }
 body {
 	background-color:azure;
@@ -62,9 +75,25 @@ div{
 #container {
 	
 }
-
 img{
     width: 100%;
+}
+button{
+    background-color: none;
+    border-radius: 15px 15px;
+    background: rgb(26, 188, 156);
+    background: -moz-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgb(24, 119, 132) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%,rgb(24, 119, 132) 100%);
+    background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgb(24, 119, 132) 100%);
+}
+button:hover{
+    animation: wiggle 5s linear infinite ;
+    background: rgb(26, 188, 156);
+    background: -moz-linear-gradient(-45deg, rgb(188, 26, 145) 0%, rgb(72, 9, 68) 100%);
+    background: -webkit-linear-gradient(-45deg, rgb(188, 26, 145) 0%, rgb(72, 9, 68) 100%);
+    background: linear-gradient(135deg, rgb(188, 26, 145) 0%, rgb(72, 9, 68) 100%);
+    border: dotted white;
+    border-radius: 50%;
 }
 /* #box {
 	border: 1px solid black;
@@ -95,7 +124,7 @@ footer{
 .back-to-top {
     text-decoration: none;
     padding: 1em;
-    background-color: #444a;
+    background-color: rgb(26, 188, 156);
     border-radius: 0.5em;
     font-weight: bold;
     line-height: 0.5;
@@ -141,8 +170,76 @@ hr {
 }
 
 /* KEY FRAMES */
+/* 1. main nav  */
+@keyframes hvr-wobble-horizontal {
+    16.65% {
+      -webkit-transform: translateX(8px);
+      transform: translateX(8px);
+    }
+    33.3% {
+      -webkit-transform: translateX(-6px);
+      transform: translateX(-6px);
+    }
+    49.95% {
+      -webkit-transform: translateX(4px);
+      transform: translateX(4px);
+    }
+    66.6% {
+      -webkit-transform: translateX(-2px);
+      transform: translateX(-2px);
+    }
+    83.25% {
+      -webkit-transform: translateX(1px);
+      transform: translateX(1px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  .hvr-wobble-horizontal {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .hvr-wobble-horizontal:hover, .hvr-wobble-horizontal:focus, .hvr-wobble-horizontal:active {
+    -webkit-animation-name: hvr-wobble-horizontal;
+    animation-name: hvr-wobble-horizontal;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
 
-
+  /* 2. Image */
+  @keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+  
 /* ========================================
 MEDIA QUERIES!
 You can adjust the min-width numbers below, and add as many new media queries as you need.
@@ -170,7 +267,7 @@ You can adjust the min-width numbers below, and add as many new media queries as
 	
 	
 	img{
-        width: 100vw;
+    width: 100vw;
     height: 100vh;
     }
 	
