@@ -19,10 +19,11 @@ html {
 	font-size: 1em;
     line-height: 1.4em;
 }
-
-
 header, footer{
     color: black;
+}
+body:hover{
+  background-color: #eaffc1;
 }
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 header{
