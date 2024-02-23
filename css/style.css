@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
 /* dislcaimer font */
 @import url('https://fonts.googleapis.com/css2?family=Annapurna+SIL:wght@400;700&display=swap');
+
+/* keyframe imports */
 @import 'animate.css';
 
 /* Basic CSS resets -- leveling slight inconsistencies in browsers */
@@ -22,7 +24,6 @@ html {
 header, footer{
     color: black;
 }
-
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
 header{
     text-align: center;
@@ -31,7 +32,14 @@ header{
     top: 0;
     left: 0;
   }
-
+header h1:hover{
+    color: rgb(26, 188, 156);
+    animation: grow-and-shrink 2000ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+  
 a{
     font-size: 1.25rem;
 }
@@ -44,7 +52,11 @@ a:hover{
     border: dotted white;
     border-radius: 50%;
 }
+section{
+  padding: 1em;
+}
 footer{
+  padding: 1em;
     position:static;
     width: 100%;
     top: 0;
@@ -69,11 +81,9 @@ h1{
     font-size: 5rem;
     font-weight: 700;
 }
-div{
-    animation-delay: 4s;
-}
 #container {
-	
+	animation-delay: 25s;
+  animation: snowglobe 10s forwards, settle 10s forwards; 
 }
 img{
     width: 100%;
@@ -95,27 +105,14 @@ button:hover{
     border: dotted white;
     border-radius: 50%;
 }
-/* #box {
-	border: 1px solid black;
-	padding: 10px;
-	display: inline-block;
-} */
-/* #shape {
-	background: red;
-	height: 100px;
-	width: 100px;
-    border-radius: 50%;
-    transform: translate(2500px, 0px) scale(4);
-    transition: all 2s;
-}
-#box:hover #shape{
-    background: blue;
-    transform: translate(0px, 0px) scale(8);
-} */
 #disclaimer{
     font-family: "Annapurna SIL", serif;
     font-weight: 400;
     font-style: normal;
+}
+#pEd{
+  padding: 1rem;
+  text-decoration: none;
 }
 footer{
     font-family: 'Times New Roman', Times, serif;
@@ -137,7 +134,6 @@ footer{
     background-color: #444f;
     color: white;
   }
-  
 
 /* Class for making YouTube/Vimeo videos responsive */
 
@@ -239,7 +235,34 @@ hr {
       transform: rotateZ(0);
     }
   }
+  /* 3. h1 header  */
+  @keyframes grow-and-shrink {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.5);
+    }
+  }
+
+  /* crazy transformation */
+  @keyframes snowglobe {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
   
+  @keyframes settle {
+    0% {
+      /* initial state */
+    }
+    100% {
+      /* final state */
+    }
+  }
 /* ========================================
 MEDIA QUERIES!
 You can adjust the min-width numbers below, and add as many new media queries as you need.
